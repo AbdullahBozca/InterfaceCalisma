@@ -32,8 +32,22 @@ public class Hesap implements IHesapla, Iisaret{
         System.out.println("2. sayıyı giriniz: ");
         int ikinciSayi=scanner.nextInt();
 
-        if (a == '+') {
-            System.out.println("Toplam = " + (birinciSayi+ikinciSayi));
+        switch (a){
+            case '+':
+                System.out.println("Toplam = " + (birinciSayi+ikinciSayi));
+                break;
+            case '-':
+                System.out.println("Çıkart = " + (birinciSayi-ikinciSayi));
+                break;
+            case '*':
+                System.out.println("Çarpma = " + (birinciSayi*ikinciSayi));
+                break;
+            case '/':
+                System.out.println("Bölme = " + (birinciSayi/ikinciSayi));
+                break;
+            default:
+                System.out.println("Geçerli işlem seçmediniz!!");
+                break;
         }
     }
 }
